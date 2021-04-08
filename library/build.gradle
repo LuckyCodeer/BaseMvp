@@ -1,7 +1,16 @@
 plugins {
     id 'com.android.library'
+    id 'com.github.panpf.bintray-publish'
 }
-
+publish {
+    userOrg = 'yanghongwei'
+    groupId = 'com.yhw.library'
+    artifactId = 'basemvp'
+    publishVersion = '1.0.0'
+    repoName="BaseMvp"
+    desc = 'Android MVP'
+    website = 'https://github.com/LuckyCodeer/BaseMvp'
+}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"

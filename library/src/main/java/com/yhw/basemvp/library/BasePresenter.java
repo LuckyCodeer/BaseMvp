@@ -28,10 +28,10 @@ public abstract class BasePresenter<M extends BaseModel, V extends IView> implem
 
     @Override
     public void onDestroy() {
-        mView = null;
         if (mModel != null) {
             mModel.onDestroy();
         }
+        mView = null;
     }
 
 }
