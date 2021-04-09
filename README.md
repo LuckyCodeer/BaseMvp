@@ -9,7 +9,9 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
+```
 
+```
 dependencies {
 	    implementation 'com.github.LuckyCodeer:BaseMvp:1.0.0'
 	}
