@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'com.github.panpf.bintray-publish'
+    id 'com.github.dcendents.android-maven'
 }
 publish {
     userOrg = 'yanghongwei'
@@ -34,6 +35,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions { // 新增
+        abortOnError false
     }
 }
 

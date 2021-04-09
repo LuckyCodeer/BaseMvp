@@ -2,8 +2,17 @@
 Android MVP框架封装，简化代码
 
 ### 引入依赖
-```kotlin
-implementation 'com.yhw.library:basemvp:1.0.0'
+
+```
+allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+dependencies {
+	    implementation 'com.github.LuckyCodeer:BaseMvp:1.0.0'
+	}
 ```
 
 ### 使用方法

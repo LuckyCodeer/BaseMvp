@@ -12,13 +12,13 @@ public class RegisterModel extends BaseModel {
      * 模拟网络注册
      */
     public void doRegister(String userName, String password, RegisterListener registerListener) {
-        if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
-            mHandler.postDelayed(() -> {
+        mHandler.postDelayed(() -> {
+            if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
                 registerListener.onFail("用户名密码不能为空");
-            }, 3000);
-            return;
-        }
-        mHandler.post(registerListener::onSuccess);
+                return;
+            }
+            registerListener.onSuccess();
+        }, 3000);
     }
 
     @Override

@@ -12,13 +12,13 @@ public class LoginModel extends BaseModel {
      * 模拟网络登录
      */
     public void doLogin(String userName, String password, LoginListener loginListener) {
-        if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
-            mHandler.postDelayed(() -> {
+        mHandler.postDelayed(() -> {
+            if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
                 loginListener.onFail("用户名密码不能为空");
-            }, 3000);
-            return;
-        }
-        mHandler.post(loginListener::onSuccess);
+                return;
+            }
+            loginListener.onSuccess();
+        }, 3000);
     }
 
     @Override
